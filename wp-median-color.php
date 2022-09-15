@@ -1,3 +1,4 @@
+<?php
 function be_attachment_id_on_images( $attr, $attachment ) {
     $value = $attr["src"];
     $value = str_replace(' ', '', $value);
@@ -33,3 +34,4 @@ function be_attachment_id_on_images( $attr, $attachment ) {
     return $attr;
 }
 add_filter( 'wp_get_attachment_image_attributes', 'be_attachment_id_on_images', 10, 2 );
+?>
